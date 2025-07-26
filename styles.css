@@ -1,0 +1,124 @@
+#quick-bookmark-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483647;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.qbs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.qbs-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-width: 90vw;
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.qbs-input {
+  width: 100%;
+  padding: 20px 24px;
+  font-size: 18px;
+  background: #2a2a2a;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.qbs-input::placeholder {
+  color: #888888;
+}
+
+.qbs-results {
+  max-height: 400px;
+  overflow-y: auto;
+  background: #1e1e1e;
+}
+
+.qbs-results::-webkit-scrollbar {
+  width: 8px;
+}
+
+.qbs-results::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+.qbs-results::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 4px;
+}
+
+.qbs-results::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}
+
+.qbs-result-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.qbs-result-item:hover {
+  background: #2a2a2a;
+}
+
+.qbs-result-item.selected {
+  background: #3a3a3a;
+}
+
+.qbs-favicon {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.qbs-result-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.qbs-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.qbs-url {
+  font-size: 12px;
+  color: #888888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.qbs-no-results {
+  padding: 40px;
+  text-align: center;
+  color: #888888;
+  font-size: 14px;
+}
