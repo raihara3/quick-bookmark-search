@@ -3,11 +3,7 @@
   "name": "Quick Bookmark Search",
   "version": "1.0.0",
   "description": "Quickly search and open bookmarks with Alt+F",
-  "permissions": [
-    "bookmarks",
-    "activeTab",
-    "tabs"
-  ],
+  "permissions": ["bookmarks", "activeTab"],
   "background": {
     "service_worker": "background.js"
   },
